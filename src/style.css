@@ -361,3 +361,336 @@ body {
   .copy-btn { align-self: flex-end; margin-top: -34px; }
   .ayat-ur { font-size: 16px; line-height: 2.3; }
 }
+
+/* ---------- Ayat Actions & Explore Button ---------- */
+.ayat-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--gold-300);
+  background: var(--gold-100);
+  color: var(--gold-600);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: all .2s ease;
+  white-space: nowrap;
+}
+
+.explore-btn:hover {
+  background: var(--gold-500);
+  color: #fff;
+  border-color: var(--gold-500);
+  box-shadow: 0 2px 8px rgba(168, 128, 29, .25);
+}
+
+.explore-btn.active {
+  background: var(--green-700);
+  color: #fff;
+  border-color: var(--green-700);
+}
+
+.explore-btn.loading {
+  opacity: .8;
+  cursor: wait;
+}
+
+.explore-btn .btn-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Explore Panel ---------- */
+.explore-panel {
+  margin-top: 22px;
+  padding: 22px 24px;
+  background: #fbf9f4;
+  border: 1px solid #ebdcc4;
+  border-radius: 14px;
+  animation: slideDown .3s ease both;
+  position: relative;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.explore-header {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #ded4c0;
+}
+
+.explore-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.explore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green-800);
+  letter-spacing: .02em;
+}
+
+.explore-badge svg {
+  color: var(--gold-600);
+}
+
+.explore-sub {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.explore-degraded-note {
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  background: #fff3cd;
+  color: #856404;
+  font-size: 12px;
+}
+
+.explore-section {
+  margin-bottom: 20px;
+}
+
+.explore-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.explore-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 8px;
+}
+
+.title-icon {
+  font-size: 16px;
+}
+
+.explore-text {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.explore-text p {
+  margin-bottom: 10px;
+}
+
+.explore-text p:last-child {
+  margin-bottom: 0;
+}
+
+.source-citation-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--gold-600);
+  background: var(--gold-100);
+  border: 1px solid var(--gold-300);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.history-card {
+  background: #fff;
+  border: 1px solid #ebdcc4;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--gold-500);
+}
+
+.history-event-title {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--green-800);
+  margin-bottom: 6px;
+}
+
+.history-details {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+/* Hadith Cards */
+.hadith-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hadith-card {
+  background: #fff;
+  border: 1px solid #ded4c0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--green-700);
+  box-shadow: 0 1px 3px rgba(0,0,0,.03);
+}
+
+.hadith-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.hadith-narrator {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green-800);
+  background: var(--green-100);
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.hadith-source-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: #f0ede6;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.hadith-text {
+  font-size: 13.5px;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.hadith-connection {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  padding-top: 6px;
+  border-top: 1px solid #f3eee6;
+}
+
+/* Sources Pills */
+.explore-sources {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #ded4c0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sources-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.sources-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.source-pill {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--green-800);
+  background: var(--green-100);
+  border: 1px solid #c9e3d7;
+  padding: 2px 9px;
+  border-radius: 999px;
+}
+
+/* Skeleton & Error */
+.explore-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.explore-skel-line {
+  height: 14px;
+  background: linear-gradient(90deg, #ede7db 25%, #f7f3eb 50%, #ede7db 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+.explore-skel-line.wide { width: 90%; }
+.explore-skel-line.med { width: 65%; }
+
+.explore-skel-box {
+  height: 70px;
+  background: linear-gradient(90deg, #ede7db 25%, #f7f3eb 50%, #ede7db 75%);
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.explore-error-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #9c2b2b;
+  font-size: 13.5px;
+}
+
+.explore-retry-btn {
+  background: var(--green-700);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.explore-retry-btn:hover {
+  background: var(--green-800);
+}
